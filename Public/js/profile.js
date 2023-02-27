@@ -37,7 +37,7 @@ const newUploadHandler = async (event) => {
 
 		options.body = form;
 
-		fetch('http://localhost:3001/api/note', options)
+		fetch('/api/note', options)
 			.then((response) => {
 				if (response.ok) {
 					showModal();
@@ -54,7 +54,7 @@ const delButtonHandler = async (event) => {
 	if (event.target.hasAttribute('data-id')) {
 		const id = event.target.getAttribute('data-id');
 
-		const response = await fetch(`http://localhost:3001/api/notes/${id}`, {
+		const response = await fetch(`/api/notes/${id}`, {
 			method: 'DELETE',
 			id: id,
 		});
