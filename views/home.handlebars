@@ -1,0 +1,20 @@
+<!-- create handlebar for when you click on a "note" and it expands so you can see entire note. -->
+  <div class="note-container">
+  {{#if notes.length}}
+    {{#each notes as |note|}}
+      <div class="upload-list">
+        <div class="note">
+          <header class="note-title">
+            {{note.title}}
+          <div class="username">
+            {{!-- {{note.user_id}} --}}
+            <time class="date">{{note.date}}</time>
+          </div>
+          </header>
+          <div class="note-desc">
+            {{note.description}}
+        </div>
+      </div> 
+    {{/each}}
+  {{/if}}
+  </div>
